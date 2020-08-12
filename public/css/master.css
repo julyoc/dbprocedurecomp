@@ -1,0 +1,21 @@
+body {
+    font-family: monospace;
+}
+button {
+    padding: 5px;
+}
+header {
+    text-align: center;
+}
+.txtcenter {
+    text-align: center;
+}
+.showt {
+    height: 400px;
+    display: block;
+    overflow-y: scroll;
+    width: inherit;
+}
+td{
+    width: inherit;
+}

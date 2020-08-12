@@ -1,0 +1,22 @@
+{
+  "name": "consultasDB",
+  "version": "1.0.0",
+  "description": "cosultas sql server",
+  "main": "index.js",
+  "author": "julio castro",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^9.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1",
+    "pg": "^8.3.0",
+    "popper.js": "^1.16.1"
+  }
+}

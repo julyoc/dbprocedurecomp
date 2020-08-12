@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos</title>
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/master.css">
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./public/js/main.js"></script>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Deber de Base de datos</h3>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <section class="row">
+            <article class="col-md-8">
+                <h6>mostrar registros</h6>
+                <button class="btn btn-primary" onclick="update()">actualizar</button>
+                <div class="table-responsive showt">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Fecha de nacimiento</th>
+                                <th scope="col">Cedula</th>
+                                <th scope="col">E-mail</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rows"></tbody>
+                    </table>
+                </div>
+            </article>
+            <article class="col-md-4">
+                <h6>añadir registro</h6>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" id="nombre" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido: </label>
+                        <input type="text" name="apellido" id="apellido" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fechanac">Fecha de Nacimiento: </label>
+                        <input type="date" name="fechanac" id="fechanac" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cedula">Cedula: </label>
+                        <input type="text" name="cedula" id="cedula" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">E-mail: </label>
+                        <input type="email" name="mail" id="mail" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numreg">Ingrese el numero de registros a guardar: </label>
+                        <input type="number" name="numreg" id="numreg" class="form-control" value="1" min="1" max="150">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 txtcenter">
+                            <button class="btn btn-primary" onclick="saveData()">Enviar Regularmente</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-primary" onclick="saveDataProcess()">Enviar por Procedure</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-6">
+                        timpo normal:
+                        <span id="t"></span>
+                    </div>
+                    <div class="col-6">
+                        tiempo Procedure:
+                        <span id="tp"></span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
